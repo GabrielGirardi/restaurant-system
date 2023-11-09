@@ -1,5 +1,18 @@
 :root {
-  --bg-base: #;
+  --bg-base: rgb(21, 21, 22);
+  --bg-input: rgb(34, 34, 39);
+  --fill-icon: rgb(253, 253, 253);
+  --text-base: rgb(201, 200, 203);
+  --text-secondary: rgb(103, 103, 105);
+  --nav-base: rgb(26, 25, 29);
+  --nav-active: rgb(34, 35, 39);
+  --nav-icon: rgb(203, 203, 205);
+  --button-base: rgb(31, 30, 34);
+  --success: rgb(77, 170, 39);
+  --error: rgb(167, 16, 16);
+  --warning: rgb(208, 194, 47);
+  --disabled: rgb(91, 91, 90);
+  --color-red: rgb(174, 17, 19);
 }
 
 * {
