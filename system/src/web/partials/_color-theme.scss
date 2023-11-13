@@ -2,17 +2,31 @@
 
 :root {
     --bg-base: rgb(21, 21, 22);
+    --bg-secondary: rgb(17, 17, 18);
     --bg-input: rgb(34, 34, 39);
+
     --fill-icon: rgb(253, 253, 253);
+    --fill-black: rgb(0, 0, 0);
+
     --text-base: rgb(201, 200, 203);
     --text-secondary: rgb(103, 103, 105);
+
+    --border-base: rgb(255, 255, 255);
+    --border-secondary: rgb(0, 0, 0);
+    --border-input: rgb(34, 34, 39);
+
     --nav-base: rgb(26, 25, 29);
     --nav-active: rgb(34, 35, 39);
     --nav-icon: rgb(203, 203, 205);
+
     --button-base: rgb(31, 30, 34);
+
     --success: rgb(77, 170, 39);
     --error: rgb(167, 16, 16);
     --warning: rgb(208, 194, 47);
     --disabled: rgb(91, 91, 90);
+
     --color-red: rgb(174, 17, 19);
+    --color-black: rgb(0, 0, 0);
+    --color-white: rgb(255, 255, 255);
 }

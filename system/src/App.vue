@@ -1,22 +1,42 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  import Home from "./views/Home.vue"
+  import Menu from "./views/Menu.vue"
+  import About from "./views/About.vue"
+  import Navigation from "./components/Navigation.vue"
+  import LoginArea from "./components/LoginArea.vue"
 </script>
 
 <template>
-  
+    <header class="flex justify-between center">
+      <Navigation @navigate="navigateToPage"/>
+      <LoginArea/>
+    </header>
+
+    <section>
+      <Home v-if="currentPage === 'home'"/>
+      <Menu v-else-if="currentPage === 'menu'"/>
+      <About v-else-if="currentPage === 'about'"/>
+    </section>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+
+<script> 
+export default {
+  components: {
+    Navigation,
+    Home,
+    About,
+    Menu
+  },
+  data() {
+    return {
+      currentPage: 'home',
+    };
+  },
+  methods: {
+    navigateToPage(page) {
+      this.currentPage = page;
+    },
+  },
+};
+</script>

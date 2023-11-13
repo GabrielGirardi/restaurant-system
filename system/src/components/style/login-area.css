@@ -1,0 +1,60 @@
+.login-area {
+  position: relative;
+  width: fit-content;
+  height: 64px;
+}
+.login-area .icon-user {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.2s ease-in-out;
+}
+.login-area .login-content {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 62px;
+  padding: 12px;
+  gap: 4px;
+  border-radius: 13px;
+  width: 300px;
+  height: 120px;
+}
+.login-area .login-content::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 18px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--color-white);
+  transform: rotate(180deg);
+}
+.login-area .login-content p {
+  color: var(--text-base);
+  font-size: 14px;
+}
+.login-area .login-content p a {
+  color: var(--warning);
+}
+.login-area:hover .login-content {
+  display: flex;
+}
+.login-area:hover .icon-user {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/*# sourceMappingURL=login-area.css.map */
