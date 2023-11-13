@@ -4,6 +4,7 @@
   import About from "./views/About.vue"
   import Navigation from "./components/Navigation.vue"
   import LoginArea from "./components/LoginArea.vue"
+  import Reservations from "./views/Reservations.vue"
 </script>
 
 <template>
@@ -16,6 +17,7 @@
       <Home v-if="currentPage === 'home'"/>
       <Menu v-else-if="currentPage === 'menu'"/>
       <About v-else-if="currentPage === 'about'"/>
+      <Reservations v-else="currentPage === 'reservations'"/>
     </section>
 </template>
 
@@ -26,7 +28,8 @@ export default {
     Navigation,
     Home,
     About,
-    Menu
+    Menu,
+    Reservations
   },
   data() {
     return {

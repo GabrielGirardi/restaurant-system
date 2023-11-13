@@ -54,7 +54,7 @@ import { Icon } from '@iconify/vue'
                 <div class="contact flex center">
                     <Icon icon="mdi:phone" width="16"/>
                     <p class="text">
-                        (11) 99999-9999
+                        (47) 99999-9999
                     </p>
                 </div>
             </div>

@@ -20,7 +20,7 @@
                     Cardápio
                 </span>
             </li>
-            <li @click="navigateTo('reservation')">
+            <li @click="navigateTo('reservations')">
                 <span>
                     Reservas
                 </span>

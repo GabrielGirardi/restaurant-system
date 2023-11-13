@@ -1,0 +1,67 @@
+section.menu {
+  background: var(--color-white);
+  padding: 2% 4%;
+}
+section.menu .title {
+  font-size: 46px;
+  color: var(--text-base);
+  text-transform: uppercase;
+}
+section.menu .subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 4%;
+}
+section.menu .menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.menu .menu-container .menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  height: 560px;
+  background: var(--color-white);
+  margin-bottom: 5%;
+  padding: 20px;
+  overflow: hidden;
+}
+section.menu .menu-container .menu-item:hover {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+section.menu .menu-container .menu-item:hover img {
+  transform: scale(1.1);
+}
+section.menu .menu-container .menu-item img {
+  margin: 0 auto;
+  object-fit: contain;
+  width: 70%;
+  height: 60%;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid rgba(204, 204, 204, 0.3);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+section.menu .menu-container .menu-item h2 {
+  text-align: center;
+  height: 10%;
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: var(--text-base);
+}
+section.menu .menu-container .menu-item p {
+  text-align: center;
+  height: 10%;
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+section.menu .menu-container .menu-item .price {
+  height: 10%;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=menu.css.map */

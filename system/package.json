@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "radix-vue": "^1.1.1",
+    "sweetalert2": "^11.9.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
