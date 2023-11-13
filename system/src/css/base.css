@@ -1,9 +1,14 @@
 :root {
   --bg-base: rgb(21, 21, 22);
+  --bg-secondary: rgb(17, 17, 18);
   --bg-input: rgb(34, 34, 39);
   --fill-icon: rgb(253, 253, 253);
+  --fill-black: rgb(0, 0, 0);
   --text-base: rgb(201, 200, 203);
   --text-secondary: rgb(103, 103, 105);
+  --border-base: rgb(255, 255, 255);
+  --border-secondary: rgb(0, 0, 0);
+  --border-input: rgb(34, 34, 39);
   --nav-base: rgb(26, 25, 29);
   --nav-active: rgb(34, 35, 39);
   --nav-icon: rgb(203, 203, 205);
@@ -13,12 +18,84 @@
   --warning: rgb(208, 194, 47);
   --disabled: rgb(91, 91, 90);
   --color-red: rgb(174, 17, 19);
+  --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
+}
+
+.flex {
+  display: flex;
+}
+
+.center,
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+@keyframes opening {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.opening {
+  animation: opening 1s ease-in-out;
+}
+
+header {
+  background: var(--bg-secondary);
+  width: 100%;
+  height: 8vh;
+  padding: 0 2%;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+body {
+  background-color: var(--bg-base);
+  font-family: "Pilcrow Rounded", sans-serif;
 }
 
 /*# sourceMappingURL=base.css.map */
