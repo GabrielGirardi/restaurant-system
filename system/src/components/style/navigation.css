@@ -24,6 +24,9 @@
   overflow: hidden;
   transition: all 0.2s ease-in-out;
 }
+.navbar .nav-items li.active {
+  opacity: 0.8;
+}
 .navbar .nav-items li:hover {
   opacity: 0.8;
   cursor: pointer;
