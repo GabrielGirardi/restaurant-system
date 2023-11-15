@@ -1,7 +1,9 @@
 <script setup>
 import "../css/menu.css"
 import Pagination from "../components/Pagination.vue"
-import Swal from 'sweetalert2'
+import { lazyload, redirectToReservations } from "../scripts/base.js"
+
+lazyload();
 </script>
 
 <template>
@@ -15,11 +17,11 @@ import Swal from 'sweetalert2'
 
         <div class="menu-container">
             <div v-for="menuItem in paginatedMenu" :key="menuItem.id" class="menu-item">
-                <img :src="menuItem.image" :alt="menuItem.name" />
+                <img class="lazyload" :src="menuItem.image" :alt="menuItem.name" />
                 <h2>{{ menuItem.name }}</h2>
                 <p>{{ menuItem.description }}</p>
                 <p class="price">R$ {{ menuItem.price }}</p>
-                <span class="button flex center justify-center">Reservar</span>
+                <span class="button flex center justify-center" @click="redirectToReservations">Reservar</span>
             </div>
         </div>
 

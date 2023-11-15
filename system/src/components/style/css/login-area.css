@@ -1,0 +1,23 @@
+.login-area {
+  position: relative;
+  width: fit-content;
+  height: 64px;
+}
+.login-area .icon-user {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  border-radius: 50%;
+  background: var(--bg-base);
+  border: 1px solid var(--border-base-opacity-sm);
+  box-shadow: 0 4px 30px var(--shadow-sm);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.login-area:hover .icon-user {
+  border: 1px solid var(--border-base-opacity-md);
+}
+
+/*# sourceMappingURL=login-area.css.map */

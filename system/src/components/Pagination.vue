@@ -1,5 +1,5 @@
 <script setup>
-import "./style/pagination.css"
+import "./style/css/pagination.css"
 import Swal from 'sweetalert2'
 </script>
 

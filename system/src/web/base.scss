@@ -23,3 +23,9 @@ body {
     font-family: 'Pilcrow Rounded', sans-serif;
 }
 
+.lazyload {
+    animation: lazyload 1s infinite;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    color: transparent;
+}

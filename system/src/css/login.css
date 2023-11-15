@@ -1,0 +1,82 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+@media (max-width: 768px) {
+  .login-container {
+    padding: 2%;
+  }
+}
+.login-container .login-form,
+.login-container .signup-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s;
+}
+.login-container .login-form h2,
+.login-container .signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+.login-container .login-form form,
+.login-container .signup-form form {
+  display: flex;
+  flex-direction: column;
+}
+.login-container .login-form form label,
+.login-container .signup-form form label {
+  margin-bottom: 8px;
+  color: var(--color-white);
+}
+.login-container .login-form form input,
+.login-container .signup-form form input {
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-base);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.login-container .login-form form input:focus,
+.login-container .signup-form form input:focus {
+  border-color: var(--warning);
+}
+.login-container .login-form form button,
+.login-container .signup-form form button {
+  padding: 12px;
+  background-color: var(--button-base);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.login-container .login-form form button:hover,
+.login-container .signup-form form button:hover {
+  opacity: 0.8;
+}
+.login-container .login-form p,
+.login-container .signup-form p {
+  text-align: center;
+  cursor: pointer;
+  color: var(--text-base);
+  margin-top: 10px;
+}
+.login-container .hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.login-container.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*# sourceMappingURL=login.css.map */

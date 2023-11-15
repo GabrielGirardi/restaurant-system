@@ -2,27 +2,66 @@ main {
   height: 92vh;
   width: 100%;
 }
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
 main .content-primary {
   padding: 2%;
   width: 30%;
   height: 100%;
   background-color: var(--bg-secondary);
 }
+@media (max-width: 768px) {
+  main .content-primary {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30vh;
+    padding-top: 6%;
+  }
+}
 main .content-primary .content-top {
   height: 33%;
+}
+@media (max-width: 768px) {
+  main .content-primary .content-top {
+    width: 120px;
+    height: 120px;
+  }
 }
 main .content-primary .content-top .logo {
   border: 1px solid var(--border-secondary);
   border-radius: 50%;
 }
+@media (max-width: 768px) {
+  main .content-primary .content-top .logo {
+    width: 100%;
+    height: 100%;
+  }
+}
 main .content-primary .content-middle {
   height: 33%;
+}
+@media (max-width: 768px) {
+  main .content-primary .content-middle {
+    align-items: center;
+    height: 120px;
+    width: 216px;
+    margin-left: 12px;
+  }
 }
 main .content-primary .content-middle .title {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 42px;
   color: var(--text-base);
+}
+@media (max-width: 768px) {
+  main .content-primary .content-middle .title {
+    font-size: 26px;
+  }
 }
 main .content-primary .content-middle .title span {
   color: var(--text-secondary);
@@ -33,13 +72,30 @@ main .content-primary .content-middle .text {
   font-size: 16px;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  main .content-primary .content-middle .text {
+    font-size: 12px;
+  }
+}
 main .content-primary .content-bottom {
   align-items: end;
   height: 33%;
 }
+@media (max-width: 768px) {
+  main .content-primary .content-bottom {
+    display: none;
+    height: 0;
+  }
+}
 main .content-primary .content-bottom .social {
   height: 20px;
   gap: 6px;
+}
+@media (max-width: 768px) {
+  main .content-primary .content-bottom .social svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 main .content-primary .content-bottom .social svg path {
   fill: var(--fill-icon);
@@ -48,6 +104,11 @@ main .content-primary .content-bottom .rights-reserved {
   color: var(--text-secondary);
   font-size: 16px;
 }
+@media (max-width: 768px) {
+  main .content-primary .content-bottom .rights-reserved {
+    font-size: 14px;
+  }
+}
 main .content-secondary {
   width: 70%;
   height: 100%;
@@ -55,13 +116,14 @@ main .content-secondary {
   background: url(https://www.greatoceanroadaustralia.org/wp-content/uploads/2022/11/ivan-stern-LOLSb7m6XkU-unsplash-1920x1080.jpg) no-repeat center center;
   padding: 2%;
 }
+@media (max-width: 768px) {
+  main .content-secondary {
+    width: 100%;
+  }
+}
 main .content-secondary .content-top {
   align-items: flex-start;
   height: 20%;
-}
-main .content-secondary .content-top .time,
-main .content-secondary .content-top .contact {
-  gap: 6px;
 }
 main .content-secondary .content-middle {
   gap: 8px;
@@ -74,6 +136,12 @@ main .content-secondary .content-middle .text-content .title {
   text-transform: uppercase;
   text-shadow: 1px 1px 2px var(--bg-base), 0 0 1em black, 0 0 0.2em black;
 }
+@media (max-width: 768px) {
+  main .content-secondary .content-middle .text-content .title {
+    text-align: center;
+    font-size: 28px;
+  }
+}
 main .content-secondary .content-middle .content {
   gap: 8px;
 }
@@ -83,29 +151,60 @@ main .content-secondary .content-middle .content .button {
   justify-content: center;
   background: rgba(0, 0, 0, 0.21);
   border-radius: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   width: 160px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  main .content-secondary .content-middle .content .button {
+    width: 80px;
+  }
 }
 main .content-secondary .content-middle .content .button:hover {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-secondary);
 }
-main .content-secondary .content-middle .content .button a {
+main .content-secondary .content-middle .content .button span {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   padding: 16px;
-  gap: 8px;
   color: var(--text-base);
   font-size: 16px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  main .content-secondary .content-middle .content .button span {
+    font-size: 14px;
+  }
+}
+main .content-secondary .content-bottom {
+  height: 20%;
+  align-items: flex-end;
+}
+main .content-secondary .content-bottom .time,
+main .content-secondary .content-bottom .contact {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-radius: 13px;
+  backdrop-filter: blur(3px);
+  padding: 6px;
+  gap: 6px;
+  color: var(--text-base);
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  main .content-secondary .content-bottom .time,
+  main .content-secondary .content-bottom .contact {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

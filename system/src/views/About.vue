@@ -2,6 +2,9 @@
 <script setup>
 import { Icon } from '@iconify/vue'
 import "../css/about.css"
+import { lazyload } from "../scripts/base.js"
+
+lazyload();
 </script>
 
 <script>
@@ -26,7 +29,7 @@ export default {
 <template>
     <div class="about-container flex justify-between slideIn">
         <div class="about-text flex column">
-            <div class="text">0-
+            <div class="text">
                 <h1>{{ restaurantName }}</h1>
                 <p>{{ aboutText }}</p>
                 <p>{{ history }}</p>
@@ -59,7 +62,7 @@ export default {
         </div>
 
         <div class="photography">
-            <img :src="src" :width="width" :height="height" alt="Restaurant Photo" draggable="false"/>
+            <img class="lazyload" :src="src" :width="width" :height="height" alt="Restaurant Photo" draggable="false"/>
         </div>
     </div>
 </template>

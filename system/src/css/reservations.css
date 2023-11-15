@@ -3,13 +3,35 @@ main.reservations {
   height: 90vh;
   padding: 2%;
 }
+@media (max-width: 768px) {
+  main.reservations {
+    flex-direction: column;
+    height: max-content;
+  }
+}
 main.reservations .title {
   color: var(--color-white);
   margin-bottom: 2%;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  main.reservations .title {
+    font-size: 22px;
+  }
+  main.reservations .title svg {
+    width: 22px;
+  }
+}
 main.reservations .content-info {
   width: 50%;
+}
+@media (max-width: 768px) {
+  main.reservations .content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
 }
 main.reservations .content-info .informations {
   height: 20%;
@@ -19,9 +41,19 @@ main.reservations .content-info .informations p {
   color: var(--text-base);
   font-size: 24px;
 }
+@media (max-width: 768px) {
+  main.reservations .content-info .informations p {
+    font-size: 16px;
+  }
+}
 main.reservations .content-info .informations h1 {
   font-size: 48px;
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  main.reservations .content-info .informations h1 {
+    font-size: 28px;
+  }
 }
 main.reservations .content-info .informations h1 b {
   color: var(--text-mark);
@@ -33,6 +65,11 @@ main.reservations .content-info .calendar .date {
   display: flex;
   justify-content: space-between;
   width: 90%;
+}
+@media (max-width: 768px) {
+  main.reservations .content-info .calendar .date {
+    width: 100%;
+  }
 }
 main.reservations .content-info .calendar .date li {
   display: flex;
@@ -47,6 +84,14 @@ main.reservations .content-info .calendar .date li {
   cursor: pointer;
   transition: all 0.5s;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  main.reservations .content-info .calendar .date li {
+    width: 50px;
+    height: 70px;
+    font-size: 14px;
+    border-top: 10px solid red;
+  }
 }
 main.reservations .content-info .calendar .date li.active {
   transform: scale(1.1);
@@ -80,8 +125,13 @@ main.reservations .content-info .people-amount .options li.active svg {
 main.reservations .content-info .people-amount .options li p {
   color: var(--color-white);
 }
+@media (max-width: 768px) {
+  main.reservations .content-info .people-amount .options li p {
+    font-size: 12px;
+  }
+}
 main.reservations .content-info .time {
-  height: 25%;
+  height: 20%;
 }
 main.reservations .content-info .time .options {
   display: flex;
@@ -99,6 +149,12 @@ main.reservations .content-info .time .options li {
   cursor: pointer;
   border-radius: 13px;
 }
+@media (max-width: 768px) {
+  main.reservations .content-info .time .options li {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
 main.reservations .content-info .time .options li.active:after {
   content: "";
   position: absolute;
@@ -110,19 +166,95 @@ main.reservations .content-info .time .options li.active:after {
   height: 10px;
   transition: all 0.3s;
 }
+main.reservations .content-info .next {
+  height: 5%;
+}
+@media (max-width: 768px) {
+  main.reservations .content-info .next {
+    display: none;
+  }
+}
+main.reservations .content-info .next .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: 13px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+main.reservations .content-info .next .btn:hover {
+  background: var(--success);
+}
 main.reservations .content-tables {
   width: 50%;
   border-left: 1px solid var(--border-secondary);
   padding-left: 2%;
 }
+@media (max-width: 768px) {
+  main.reservations .content-tables {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+  }
+}
 main.reservations .content-tables .show-room {
   width: 100%;
-  height: 10%;
+  height: 6%;
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+@media (max-width: 768px) {
+  main.reservations .content-tables .show-room {
+    height: 40px;
+    margin-top: 20px;
+  }
+}
+main.reservations .content-tables .show-room .title {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  main.reservations .content-tables .show-room .title {
+    font-size: 16px;
+  }
+  main.reservations .content-tables .show-room .title svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width: 768px) {
+  main.reservations .content-tables .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin-top: 20px;
+  }
+  main.reservations .content-tables .next .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    background: var(--color-white);
+    border-radius: 13px;
+    color: var(--color-black);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  main.reservations .content-tables .next .btn:hover {
+    background: var(--success);
+  }
 }
 
 /*# sourceMappingURL=reservations.css.map */
