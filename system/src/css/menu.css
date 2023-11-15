@@ -18,6 +18,7 @@ section.menu .menu-container {
   justify-content: space-between;
 }
 section.menu .menu-container .menu-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,13 +27,19 @@ section.menu .menu-container .menu-item {
   background: var(--color-white);
   margin-bottom: 5%;
   padding: 20px;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
 }
 section.menu .menu-container .menu-item:hover {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
 }
 section.menu .menu-container .menu-item:hover img {
   transform: scale(1.1);
+  filter: grayscale(1);
+}
+section.menu .menu-container .menu-item:hover .button {
+  opacity: 1;
 }
 section.menu .menu-container .menu-item img {
   margin: 0 auto;
@@ -62,6 +69,20 @@ section.menu .menu-container .menu-item p {
 section.menu .menu-container .menu-item .price {
   height: 10%;
   font-weight: bold;
+}
+section.menu .menu-container .menu-item .button {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 40px;
+  opacity: 0;
+  background: var(--success);
+  color: var(--color-white);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=menu.css.map */

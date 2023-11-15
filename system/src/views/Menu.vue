@@ -19,6 +19,7 @@ import Swal from 'sweetalert2'
                 <h2>{{ menuItem.name }}</h2>
                 <p>{{ menuItem.description }}</p>
                 <p class="price">R$ {{ menuItem.price }}</p>
+                <span class="button flex center justify-center">Reservar</span>
             </div>
         </div>
 
