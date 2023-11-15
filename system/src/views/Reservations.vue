@@ -3,6 +3,7 @@ import "../css/reservations.css"
 import Tables from "../components/Tables.vue"
 import { Icon } from '@iconify/vue'
 import { ref } from 'vue'
+import Swal from 'sweetalert2'
 </script>
 
 <template>
@@ -49,6 +50,9 @@ import { ref } from 'vue'
                     </li>
                 </ul>
             </div>
+            <div class="next">
+                <div class="btn btn-primary" @click="submit()">Reservar</div>
+            </div>
         </section>
 
         <section class="content-tables">
@@ -59,9 +63,12 @@ import { ref } from 'vue'
             <Tables/>
             <div class="show-room flex center justify-center">
                 <h3 class="title flex center justify-center">
-                    <Icon icon="material-symbols-light:music-cast" color="white" width="32"/>
-                    Palco de shows
+                    <Icon icon="material-symbols-light:music-cast" color="white" width="30"/>
+                    <p>Palco de shows</p>
                 </h3>
+            </div>
+            <div class="next">
+                <div class="hidden btn btn-primary" @click="submit()">Reservar</div>
             </div>
         </section>
         
@@ -159,6 +166,16 @@ export default {
             selectedTime: null,
         }
     },
+    computed: {
+        isFormValid() {
+            return (
+                this.activeIndex !== null &&
+                this.selectedOption !== null &&
+                this.selectedTime !== null &&
+                this.selectedTable !== null
+            );
+        },
+    },
     methods: {
         setActive(index) {
             this.activeIndex = index;
@@ -169,6 +186,23 @@ export default {
         setTime(index) {
             this.selectedTime = index;
         },
+        submit() {
+            if (this.isFormValid) {
+                Swal.fire({
+                    title: 'Pronto!',
+                    text: 'Reserva realizada com sucesso! Verifique as informações na área do cliente',
+                    icon: 'success',
+                    confirmButtonText: 'Aceitar'
+                });
+            } else {
+                Swal.fire({
+                    title: 'Atenção!',
+                    text: 'Complete todas as seleções antes de fazer a reserva.',
+                    icon: 'warning',
+                    confirmButtonText: 'Entendi'
+                });
+            }
+        }
     }
 }
 </script>

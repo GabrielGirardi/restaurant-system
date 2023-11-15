@@ -2,11 +2,22 @@
   width: 100%;
   padding: 6%;
 }
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
 .about-container .about-text {
   max-width: 50%;
   text-align: left;
   padding: 20px;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .about-container .about-text {
+    padding: 0;
+    max-width: 100%;
+  }
 }
 .about-container .about-text .text {
   display: flex;
@@ -19,9 +30,19 @@
   margin-bottom: 15px;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .about-container .about-text .text h1 {
+    font-size: 34px;
+  }
+}
 .about-container .about-text .text p {
   color: var(--color-white);
   font-size: 22px;
+}
+@media (max-width: 768px) {
+  .about-container .about-text .text p {
+    font-size: 16px;
+  }
 }
 .about-container .about-text .contact {
   gap: 8px;
@@ -31,9 +52,19 @@
   color: var(--color-white);
   margin-left: 8px;
 }
+@media (max-width: 768px) {
+  .about-container .about-text .contact a {
+    font-size: 16px;
+  }
+}
 .about-container .about-text .founders-address {
   margin-top: 34%;
   gap: 10%;
+}
+@media (max-width: 768px) {
+  .about-container .about-text .founders-address {
+    margin-top: 10px;
+  }
 }
 .about-container .about-text .founders-address .founders h3,
 .about-container .about-text .founders-address .address h3 {
@@ -41,16 +72,34 @@
   font-size: 22px;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .about-container .about-text .founders-address .founders h3,
+  .about-container .about-text .founders-address .address h3 {
+    font-size: 16px;
+  }
+}
 .about-container .about-text .founders-address .founders p,
 .about-container .about-text .founders-address .address p {
   color: var(--color-white);
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .about-container .about-text .founders-address .founders p,
+  .about-container .about-text .founders-address .address p {
+    font-size: 14px;
+  }
 }
 .about-container .photography {
   max-width: 50%;
   text-align: center;
   border: 1px solid var(--color-white);
   border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .about-container .photography {
+    max-width: 100%;
+    margin-top: 20px;
+  }
 }
 .about-container .photography:hover {
   animation: shake 0.5s ease-in-out;
@@ -60,6 +109,11 @@
   height: 100%;
   border-radius: 8px;
   transform: translate(20px, -20px);
+}
+@media (max-width: 768px) {
+  .about-container .photography img {
+    transform: translate(0, 0);
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

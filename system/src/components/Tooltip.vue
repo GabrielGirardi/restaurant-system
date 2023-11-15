@@ -1,7 +1,7 @@
 <script setup>
 import { TooltipArrow, TooltipContent, TooltipPortal, TooltipProvider, TooltipRoot, TooltipTrigger } from "radix-vue"
 import { Icon } from "@iconify/vue"
-import "./style/tooltip.css"
+import "./style/css/tooltip.css"
 
 </script>
 

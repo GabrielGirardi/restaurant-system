@@ -1,5 +1,5 @@
 <script setup>
-import "./style/tables.css"
+import "./style/css/tables.css"
 import { ref } from 'vue';
 
 const tables = ref([

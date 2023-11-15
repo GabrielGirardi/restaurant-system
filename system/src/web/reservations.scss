@@ -3,14 +3,34 @@ main.reservations {
     height: 90vh;
     padding: 2%;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: max-content;
+    }
+
     .title {
         color: var(--color-white);
         margin-bottom: 2%;
         gap: 8px;
+
+        @media (max-width: 768px) {
+            font-size: 22px;
+
+            svg {
+                width: 22px;
+            }
+        }
     }
 
     .content-info {
         width: 50%;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+        }
 
         .informations {
             height: 20%;
@@ -19,11 +39,19 @@ main.reservations {
             p {
                 color: var(--text-base);
                 font-size: 24px;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                }
             }
 
             h1 {
                 font-size: 48px;
                 text-transform: uppercase;
+
+                @media (max-width: 768px) {
+                    font-size: 28px;
+                }
 
                 b {
                     color: var(--text-mark);
@@ -39,6 +67,10 @@ main.reservations {
                 justify-content: space-between;
                 width: 90%;
 
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
                 li {
                     display: flex;
                     justify-content: center;
@@ -52,6 +84,13 @@ main.reservations {
                     cursor: pointer;
                     transition: all 0.5s;
                     font-weight: 700;
+
+                    @media (max-width: 768px) {
+                        width: 50px;
+                        height: 70px;
+                        font-size: 14px;
+                        border-top: 10px solid red;
+                    }
 
                     &.active {
                         transform: scale(1.1);
@@ -80,6 +119,10 @@ main.reservations {
                     cursor: pointer;
                     transition: all 0.5s;
 
+                    @media (max-width: 768px) {
+
+                    }
+
                     &.active {
                         border: 1px solid var(--text-mark);
 
@@ -90,13 +133,17 @@ main.reservations {
 
                     p {
                         color: var(--color-white);
+
+                        @media (max-width: 768px) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
         }
 
         .time {
-            height: 25%;
+            height: 20%;
 
             .options {
                 display: flex;
@@ -113,6 +160,11 @@ main.reservations {
                     height: 60px;
                     cursor: pointer;
                     border-radius: 13px;
+
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
                     
                     &.active {
                         &:after {
@@ -130,6 +182,34 @@ main.reservations {
                 }
             }
         }
+
+        .next {
+            height: 5%;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: 100%;
+                background: var(--color-white);
+                border-radius: 13px;
+                color: var(--color-black);
+                text-transform: uppercase;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover {
+                    background: var(--success);
+                }
+        
+            }
+        }
     }
 
     .content-tables {
@@ -137,14 +217,67 @@ main.reservations {
         border-left: 1px solid var(--border-secondary);
         padding-left: 2%;
 
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 20px;
+            border: none;
+        }
+
         .show-room {
             width: 100%;
-            height: 10%;
+            height: 6%;
             background: rgba(255, 255, 255, 0.12);
             box-shadow: 0 0 6px rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(4px);
             border: 1px solid rgba(255, 255, 255, 0.06);
+
+            @media (max-width: 768px) {
+                height: 40px;
+                margin-top: 20px;
+            }
+
+            .title {
+                margin: 0;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .next {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 32px;
+                margin-top: 20px;
+    
+                .btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20%;
+                    height: 100%;
+                    background: var(--color-white);
+                    border-radius: 13px;
+                    color: var(--color-black);
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.5s;
+    
+                    &:hover {
+                        background: var(--success);
+                    }
+                }
+            }
         }
     }
 }
