@@ -47,7 +47,7 @@ main.reservations .content-info .informations p {
   }
 }
 main.reservations .content-info .informations h1 {
-  font-size: 48px;
+  font-size: 36px;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
@@ -76,7 +76,7 @@ main.reservations .content-info .calendar .date li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 120px;
+  width: 15%;
   height: 100px;
   border-top: 20px solid red;
   border-radius: 13px;
@@ -111,7 +111,7 @@ main.reservations .content-info .people-amount .options li {
   border-radius: 13px;
   padding: 6px 10px;
   gap: 8px;
-  width: 210px;
+  width: 31%;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.5s;

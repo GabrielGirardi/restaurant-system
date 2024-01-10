@@ -2,7 +2,6 @@
 import "../css/reservations.css"
 import Tables from "../components/Tables.vue"
 import { Icon } from '@iconify/vue'
-import { ref } from 'vue'
 import Swal from 'sweetalert2'
 </script>
 
@@ -10,7 +9,7 @@ import Swal from 'sweetalert2'
     <main class="reservations flex">
         <section class="content-info">
             <div class="informations">
-                <p>Olá, Visitante!</p>
+                <p>Olá, visitante!</p>
                 <h1>Faça a reserva da sua mesa no <b>Ahoy</b></h1>
             </div>
             <div class="calendar">
